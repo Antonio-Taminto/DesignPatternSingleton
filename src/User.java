@@ -5,14 +5,12 @@ public class User {
     private static User userSigleton;
     public static User getUserSigleton() {
         if (userSigleton == null ){
-            userSigleton = new User("Mario",30);
+            userSigleton = new User();
         }
         return userSigleton;
     }
 
-    public User(String name, Integer age) {
-        this.name = name;
-        this.age = age;
+    private User() {
     }
 
     public String getName() {
